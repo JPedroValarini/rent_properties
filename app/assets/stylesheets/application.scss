@@ -27,6 +27,10 @@
 	font-style: normal;
 }	
 
+body {
+  background-color: #fffbfb;
+}
+
 footer {
   margin-top: 36px;
   width: 100%;
@@ -45,4 +49,39 @@ a:hover {
   transform: scaleX(1);
   text-decoration: underline !important;
   cursor: pointer;
+}
+
+#carouselExampleIndicators{
+  border-radius: 0.8rem;
+}
+
+.img-post {
+  border-radius: 0.5rem;
+}
+
+.div-post { 
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding-top: 1rem;
+  color: rgb(41, 45, 50);
+}
+
+.post-price {
+  font-size: 1.25rem;
+  line-height: 1.334;
+  font-weight: 500;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0.8rem;
+}
+
+.price-box {
+  padding: 8px;
+}
+
+.card {
+  border-radius: 0.8rem;
 }
