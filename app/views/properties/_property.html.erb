@@ -1,12 +1,17 @@
-<div id="<%= dom_id property %>">
+<div class="" style=" min-height: 700px;">
+  <div id="<%= dom_id property %>">
+    <div style="margin: 10px; text-align: center;">
+      <p>
+        <strong>Name:</strong>
+        <%= property.name %>
+      </p>
+    </div>
 
-  <p>
-    <strong>Name:</strong>
-    <%= property.name %>
-  </p>
+    <div class="show-new" style="text-align: center;">
+      <% property.pictures.each do |picture| %>
+        <%= link_to image_tag(picture), picture, class: 'd-block w-100 m-2' %>
+      <% end %>
+    </div>
 
-  <%= property.pictures.each do |picture| %>
-    <%= link_to image_tag(picture), picture %>
-  <% end %>
-
+  </div>
 </div>

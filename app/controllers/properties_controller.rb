@@ -1,5 +1,4 @@
 class PropertiesController < ApplicationController
-  require 'byebug'
   before_action :set_property, only: %i[ show edit update destroy ]
 
   def home
