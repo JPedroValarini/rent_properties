@@ -1,7 +1,9 @@
 class PropertiesController < ApplicationController
+  require 'byebug'
   before_action :set_property, only: %i[ show edit update destroy ]
 
   def home
+    @properties = Property.all
   end
 
   # GET /properties or /properties.json
@@ -25,6 +27,7 @@ class PropertiesController < ApplicationController
   # POST /properties or /properties.json
   def create
     @property = Property.new(property_params)
+    # @property.images.attach(params[:images])
 
     respond_to do |format|
       if @property.save
@@ -68,6 +71,6 @@ class PropertiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def property_params
-      params.require(:property).permit(:name)
+      params.require(:property).permit(:name, :body, pictures: [])
     end
 end

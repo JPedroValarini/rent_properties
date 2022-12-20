@@ -1,7 +1,12 @@
 <div id="<%= dom_id property %>">
+
   <p>
     <strong>Name:</strong>
     <%= property.name %>
   </p>
+
+  <%= property.pictures.each do |picture| %>
+    <%= link_to image_tag(picture), picture %>
+  <% end %>
 
 </div>
