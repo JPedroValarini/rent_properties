@@ -17,6 +17,31 @@
   </div>
 
   <div style="margin: 10px;">
+    <%= form.label :price, placeholder: "price", style: "display: block" %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div style="margin: 10px;">
+    <%= form.label :description, placeholder: "description", style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div style="margin: 10px;">
+    <%= form.label :address, placeholder: "address", style: "display: block" %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div style="margin: 10px;">
+    <%= form.label :bedroom, placeholder: "bedroom", style: "display: block" %>
+    <%= form.text_field :bedroom %>
+  </div>
+
+  <div style="margin: 10px;">
+    <%= form.label :bathroom, placeholder: "bathroom", style: "display: block" %>
+    <%= form.text_field :bathroom %>
+  </div>
+
+  <div style="margin: 10px;">
     <%= form.label :pictures, style: "display: block" %>
     <%= form.file_field :pictures, multiple: true %>
   </div>

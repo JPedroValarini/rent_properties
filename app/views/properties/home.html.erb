@@ -34,13 +34,13 @@
                 <div class="container p-1">
                   <div class="div-post">
                     <span><%= property.name %></span>
-                    <span><strong>Alameda Fernão Cardim, 161</strong></span>
-                    <span><small>2 bedrooms • 1 bath</small></span>
+                    <span><strong><%= property.address %></strong></span>
+                    <span><small><%= property.bedroom %> bedrooms • <%= property.bathroom %> bath</small></span>
                   </div>
                 </div>
                 <div class="container p-1 mt-1 post-price">
                   <div class="price-box">
-                    R$ 5,490
+                    <p> A partir de <%= number_to_currency(property.price, unit: "R$ ", separator: ",", delimiter: ".")%>
                   </div>
                 </div>
                 <div class="container p-1 mt-1">
