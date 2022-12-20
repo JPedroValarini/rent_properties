@@ -6,9 +6,9 @@
               <div class="card-body">
                 <div id="carouselExampleIndicators-<%= property.id %>" class="carousel slide p-1" data-bs-ride="carousel">
                   <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators-<%= property.id %>" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators-<%= property.id %>" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators-<%= property.id %>" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <% property.pictures.each_with_index do |picture, index| %>
+                      <button type="button" data-bs-target="#carouselExampleIndicators-<%= index %>" data-bs-slide-to="<%= index %>" class="active" aria-current="true" aria-label="Slide <%= index %>"></button>
+                    <% end %>
                   </div>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -34,13 +34,13 @@
                 <div class="container p-1">
                   <div class="div-post">
                     <span><%= property.name %></span>
-                    <span><strong>Alameda Fernão Cardim, 161</strong></span>
-                    <span><small>2 bedrooms • 1 bath</small></span>
+                    <span><strong><%= property.address %></strong></span>
+                    <span><small><%= property.bedroom %> • <%= property.bathroom %> bath</small></span>
                   </div>
                 </div>
                 <div class="container p-1 mt-1 post-price">
                   <div class="price-box">
-                    R$ 5,490
+                    <p> A partir de <%= number_to_currency(property.price, unit: "R$ ", separator: ",", delimiter: ".")%>
                   </div>
                 </div>
                 <div class="container p-1 mt-1">
