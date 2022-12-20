@@ -57,6 +57,10 @@ a:hover {
 
 .img-post {
   border-radius: 0.5rem;
+  max-height: 100%;
+  object-fit: cover;
+  height: 260px !important;
+  width: 100% !important;
 }
 
 .div-post { 
@@ -84,4 +88,13 @@ a:hover {
 
 .card {
   border-radius: 0.8rem;
+}
+
+.icon-bg-color {
+  background-color: #171515;
+}
+
+.card-space{
+  margin-bottom: 10px;
+  margin-top: 10px
 }
