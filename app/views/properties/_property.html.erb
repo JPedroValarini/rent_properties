@@ -1,17 +1,41 @@
-<div class="" style=" min-height: 700px;">
-  <div id="<%= dom_id property %>">
-    <div style="margin: 10px; text-align: center;">
-      <p>
-        <strong>Name:</strong>
-        <%= property.name %>
-      </p>
-    </div>
+<div class="container d-flex" style=" min-height: 700px; justify-content: center;">
+  <div class="row">
+    <div class="col">
+      <div id="<%= dom_id property %>">
 
-    <div class="show-new" style="text-align: center;">
-      <% property.pictures.each do |picture| %>
-        <%= link_to image_tag(picture), picture, class: 'd-block w-100 m-2' %>
-      <% end %>
-    </div>
+        <div style="margin: 10px; text-align: center;">
+        <div class="container p-1 mt-1" style="font-size: 1.25rem; line-height: 1.334;">
+          <p>
+          <strong>Address:</strong>
+            <%= property.address %>
+          </p>
 
+          <div class="d-flex">
+            <div class="container p-1 mt-1" style="font-size: 1.25rem; line-height: 1.334;">
+              <i class="fa-solid fa-bath"></i>
+                <%= property.bathroom %>
+            </div>
+            <div class="container p-1 mt-1" style="font-size: 1.25rem; line-height: 1.334;">
+              <i class="fa-solid fa-bed"></i>
+                <%= property.bedroom %>
+            </div>
+          </div>
+        </div>
+
+        <div class="container p-1 mt-1 post-price">
+          <div class="price-box">
+            <p> A partir de <%= number_to_currency(property.price, unit: "R$ ", separator: ",", delimiter: ".")%>
+          </div>
+        </div>
+
+        <div class="show-new" style="text-align: center;">
+          <% property.pictures.each do |picture| %>
+            <%= link_to image_tag(picture), picture, class: 'd-block w-100 m-2 prop-show' %>
+          <% end %>
+        </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 </div>

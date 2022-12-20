@@ -104,5 +104,16 @@ div .show-new img {
   max-height: 100%;
   object-fit: cover;
   height: 260px !important;
-  width: 50% !important;
+  width: 90% !important;
+}
+
+.show-new {
+  display: flex !important;
+}
+
+@media (max-width: 600px)
+{
+  .show-new {
+    display: block !important;
+  }
 }
