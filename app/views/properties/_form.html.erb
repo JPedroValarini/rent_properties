@@ -11,13 +11,13 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
+  <div style="margin: 10px;">
+    <%= form.label :name, placeholder: "name", style: "display: block" %>
     <%= form.text_field :name %>
   </div>
 
-  <div>
-    <%= form.label :pictures %>
+  <div style="margin: 10px;">
+    <%= form.label :pictures, style: "display: block" %>
     <%= form.file_field :pictures, multiple: true %>
   </div>
 
